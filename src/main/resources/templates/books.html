@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Books</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+<th>title</th>
+<th>publisher</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr th:each="book : ${books}">
+                <td th:text="${book.id}"></td>
+                <td th:text="${book.title}"></td>
+                <td th:text="${book.isbm}"></td>
+                <td th:text="${book.publisher.name}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
